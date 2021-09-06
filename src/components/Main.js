@@ -1,19 +1,38 @@
 import React, { Component } from 'react'
 import HornedBeasts from './HornedBeasts'
-import moose from '../images/moose.jpg'
-import rhino from '../images/rhino.jpg'
+// import moose from '../images/moose.jpg'
+// import rhino from '../images/rhino.jpg'
 
 class Main extends Component {
+
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {
+    //         stateLikes: this.props.likesInt,
+    //     }
+    // }
+    // addLikes = () => {
+    //     this.setState({
+    //         likesInt: this.state.stateLikes + 1
+    //     })
+    // }
+
     render() {
-        let beasts=[{name:'moose',image:moose,desc:'lives in america and it is endangered'},
-        {name:'rhino',image:rhino,desc:'lives in africa and it is endangered'}]
+        let beasts = require('./data.json')
         return (
             <>
                 {
-                    beasts.map(elem=>{
-                    return <HornedBeasts title={elem.name} description={elem.desc} imgSrc={elem.image} />
-                    })
+                    beasts.map(elem => {
+                        return (
+                            <>
+                                <HornedBeasts title={elem.title} description={elem.description} imgSrc={elem.image_url}  />
+                            </>
+                        )
+                    }
+                    )
                 }
+
+
             </>
         )
     }
