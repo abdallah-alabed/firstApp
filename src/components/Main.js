@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Data from './Data'
+import HornedBeasts from './HornedBeasts'
 import moose from '../images/moose.jpg'
 import rhino from '../images/rhino.jpg'
 
@@ -11,7 +11,7 @@ class Main extends Component {
             <>
                 {
                     beasts.map(elem=>{
-                    return <Data title={elem.name} description={elem.desc} imgSrc={elem.image} />
+                    return <HornedBeasts title={elem.name} description={elem.desc} imgSrc={elem.image} />
                     })
                 }
             </>
