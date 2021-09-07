@@ -1,13 +1,13 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 class Header extends Component {
-    render() {
-        return (
-            <>
-             <h1> My First App </h1>   
-            </>
-        )
-    }
+  render() {
+    return (
+      <>
+        <h1> My First App </h1>
+      </>
+    );
+  }
 }
 
-export default Header
+export default Header;
